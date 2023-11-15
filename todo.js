@@ -33,9 +33,34 @@ list.addEventListener('click',function(ev){
 //add new
 
 function newElement(){
-    var li= document.createElement('li');
-    var inp=document.getElementById('addNew').value;
-    var t=document.createTextNode('inp');
+    var li= document.createElement("li");
+    var inp=document.getElementById("addNew").value;
+    var t=document.createTextNode(inp);
     li.appendChild(t);
+
+    if(inp===''){
+        alert('You must input someting!')
+    }
+    else{
+        document.getElementById('list').appendChild(li)
+    }
+
+    document.getElementById('addNew').value=""
+    
+    //close symbol
+    var span = document.createElement('span')
+    var x = document.createTextNode('\u00D7')
+    span.className='close'
+    span.appendChild(x)
+    li.appendChild(span)
+
+    //close fn
+    for(i=0;i<close.length;i++){
+        close[i].onclick = function(){
+            var here = this.parentElement;
+            here.style.display="none"
+        }
+    }
 }
+
 

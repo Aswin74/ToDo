@@ -15,9 +15,9 @@ body{
 
 }
 
-.header::after{
+.header::after{ /**provide space after header**/
     content: " ";
-    display: table;
+    display: table; 
     clear:both;
 }
 
@@ -43,6 +43,7 @@ input{
 
 .addBtn:hover{
     background-color: rgb(204, 204, 204);
+    
 }
 
 ul{
